@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Tool to easily search for CPEs for any software used
+Tool to easily search for CPE 
 """
 
 import optparse
