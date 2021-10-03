@@ -7,6 +7,7 @@ def get_arguments():
     parser = optparse.OptionParser()
     parser.add_option("-l", "--lfi_list", dest="lfi_list", help="lfi list to use for fuzzing")
     parser.add_option("-u", "--url", dest="url", help="URL to fuzz")
+    parser.add_option("-f", "--fuzz", dest="fuzz", help="string to input between url and file, example: /../../../../../..")
     (options, arguments) = parser.parse_args()
     if not options.lfi_list:
         parser.error("[-] Please specify a list to use for fuzzing, use --help for more info")
@@ -34,27 +35,26 @@ def test_url(url):
 
 
 #fuzz for each line in lfi list
-def fuzz_time(lfi_list):
-	with open(lfi_list, "r") as f:
-		for line in f:
-			r = requests.get(url + line)
-			if r.text:
-				print("[+] Check Here: " + url + line + "\n")
-				#print(r.text)
+def fuzz_time(lfi_list, url, fuzz):
+	f = open(lfi_list, "r")
+	lines = f.readlines()
+	for line in lines:
+		line = line.strip()
+		r = requests.get(url + fuzz + line, timeout=2)
+		if r.text:
+			print("[+] Check Here: " + url + fuzz + line)
+			#print(r.text)
 
 
 
-try:
+try: 
 	options = get_arguments()
 	status_code_list, url, lfi_list = create_variables()
 	test_url(options.url)
-	fuzz_time(options.lfi_list)
+	fuzz_time(options.lfi_list, options.url, options.fuzz)
+
 
 except requests.exceptions.RequestException as e:
 	print("[-] Failed to connect to the given URL, exiting now")
 	sys.exit(0)
-
-
-
-
 
