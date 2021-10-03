@@ -1,6 +1,6 @@
 import requests 
 import optparse
-
+import sys
 
 #get arguments from input
 def get_arguments():
@@ -31,9 +31,6 @@ def test_url(url):
 		print("[+] Connection attempt successful\n")
 		print("*" * 50)
 		print("[+] Beginning to fuzz for LFI based on a list\n")
-	else:
-		print("[-] Connecting attempt to the given URL failed, ending program")
-		#stop program here somehow???? idk why break is outside of loop
 
 
 #fuzz for each line in lfi list
@@ -47,8 +44,17 @@ def fuzz_time(lfi_list):
 
 
 
+try:
+	options = get_arguments()
+	status_code_list, url, lfi_list = create_variables()
+	test_url(options.url)
+	fuzz_time(options.lfi_list)
 
-options = get_arguments()
-status_code_list, url, lfi_list = create_variables()
-test_url(options.url)
-fuzz_time(options.lfi_list)
+except requests.exceptions.RequestException as e:
+	print("[-] Failed to connect to the given URL, exiting now")
+	sys.exit(0)
+
+
+
+
+
