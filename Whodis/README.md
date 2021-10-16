@@ -35,9 +35,9 @@ Options:
 
 Example commands:
 ```sh
-python3 ip_own.py -a APIKEYHERE -n 192.168.1.0/24 -c 
-python3 ip_own.py -a APIKEYHERE -F ip_list.txt -c
-python3 ip_own.py -a APIKEYHERE -i 192.168.1.1 -c
+python3 whodis.py -a APIKEYHERE -n 192.168.1.0/24 -c 
+python3 whodis.py -a APIKEYHERE -F ip_list.txt -c
+python3 whodis.py -a APIKEYHERE -i 192.168.1.1 -c
 ```
 
 
