@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 import requests
 import optparse
-from bs4 import BeautifulSoup
-from tabulate import tabulate
 import csv
 from colorama import Fore
 import ipaddress
 import re
-import pyfiglet
 
 field_list = [
 	"continent_name",
