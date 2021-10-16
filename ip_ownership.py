@@ -7,7 +7,7 @@ from tabulate import tabulate
 import csv
 
 field_list = [
-	"continent_name",
+    "continent_name",
     "country_code2",
     "country_code3",
     "country_name",
