@@ -71,7 +71,7 @@ python3 ipgeo.py -k api.txt -i 192.168.1.1 -o output.csv
 ```
 
 
-## Example Outputs:
+## Example outputs:
 
 
 ![](example_1.png)
