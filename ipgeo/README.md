@@ -34,8 +34,7 @@ Options:
                         Enter an IP Address range using CIDR ex:
                         192.168.1.0/24
   -o OUTPUT_FILE, --output_file=OUTPUT_FILE
-                        File name for the csv output, default is
-                        whodis_lookup.csv
+                        File name for the csv output
   -H, --hide_output     Hide the output
 ```
 
