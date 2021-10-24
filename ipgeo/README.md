@@ -12,7 +12,7 @@ python3 ipgeo.py -h
 
 
 ```sh
-python3 ipgeo.py --help
+python3 ipgeo.py -h
 Usage: ipgeo.py [options]
 
 Options:
@@ -25,6 +25,9 @@ Options:
   --lf, --list_fields   list all the possible fields
   -a API_KEY, --api_key=API_KEY
                         Enter your API key
+  -k API_KEY_FILE, --api_key_file=API_KEY_FILE
+                        Enter the filename where the API key is stored, must
+                        contain only one line with the API key
   -F FILE_LIST, --file_list=FILE_LIST
                         Enter your API key
   -n CIDR_NOTATION, --cidr_notation=CIDR_NOTATION
@@ -34,7 +37,6 @@ Options:
                         File name for the csv output, default is
                         whodis_lookup.csv
   -H, --hide_output     Hide the output
-
 ```
 
 
