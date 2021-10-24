@@ -75,4 +75,4 @@ Example Outputs:
 ![](/images/example_1.png)
 
 
-!([](images/example_3.png)
+![](images/example_3.png)
