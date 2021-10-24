@@ -4,7 +4,7 @@
 
 ** This program requires an API key from https://ipgeolocation.io/, accounts are free
 
-Usage:
+## Usage:
 ```sh
 pip3 install -r requirements.txt
 python3 ipgeo.py -h
@@ -38,7 +38,7 @@ Options:
 ```
 
 
-Possible search field list:
+## Possible search field list:
 ```sh
 python3 ipgeo.py --lf
 continent_name
@@ -63,7 +63,7 @@ organization
 geoname_id
 ```
 
-Example commands:
+## Example commands:
 ```sh
 python3 ipgeo.py -a APIKEYHERE -n 192.168.1.0/24 
 python3 ipgeo.py -k api.txt -F ip_list.txt -o file.csv
@@ -71,7 +71,7 @@ python3 ipgeo.py -k api.txt -i 192.168.1.1 -o output.csv
 ```
 
 
-Example Outputs:
+## Example Outputs:
 
 
 ![](example_1.png)
