@@ -66,7 +66,7 @@ geoname_id
 Example commands:
 ```sh
 python3 ipgeo.py -a APIKEYHERE -n 192.168.1.0/24 
-python3 ipgeo.py -k api.txt -F ip_list.txt -c -o file.csv
+python3 ipgeo.py -k api.txt -F ip_list.txt -o file.csv
 python3 ipgeo.py -k api.txt -i 192.168.1.1 -o output.csv
 ```
 
