@@ -15,7 +15,6 @@ def get_arguments():
     return options
 
 
-
 #Function to open a file and return the list of URLs
 def open_file(file_list):
 	url_list = []
@@ -25,9 +24,6 @@ def open_file(file_list):
 			url_list.append(line)
 	f.close()
 	return url_list		
-
-
-
 
 
 #Main function of the tool
@@ -56,8 +52,6 @@ def check_headers(url):
 		print(Fore.RED + f"{url}" + Fore.RESET + " is missing the X-Frame-Options Header")
 
 
-
-
 #Function calls
 options = get_arguments()
 if options.file_list:
@@ -70,16 +64,3 @@ for url in url_list:
 	except requests.exceptions.RequestException as e:
 		print("[" + Fore.RED + "-" + Fore.RESET + "]" + f"There was a connection error on {url}")
 		print('\n\n\n')
-
-
-
-
-
-
-
-
-
-
-
-
-
