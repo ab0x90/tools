@@ -60,11 +60,13 @@ def check_headers(url):
 #Function calls
 options = get_arguments()
 url_list = []
+#If a single url is entered
 if options.url:
-	print(options.url)
 	url_list.append(options.url)
+#If a file containing a list of urls is entered
 if options.file_list:
 	url_list = open_file(options.file_list)
+#For each URL
 for url in url_list:
 	try:
 		check_headers(url)
