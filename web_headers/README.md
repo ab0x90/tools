@@ -1,4 +1,4 @@
-# README for Ipgeo
+# README for web_headers.py
 
 ## A python program for analyzing web responses for missing headers
 
